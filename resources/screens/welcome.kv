@@ -1,0 +1,78 @@
+<WelcomeScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+
+        FloatLayout:
+            BoxLayout:
+                orientation: 'vertical'
+                height: root.height
+                pos_hint: {'center_x': 0.5, 'center_y': 0.75}
+
+                Label:
+                    text: "PyPong"
+                    font_size: 98
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                Label:
+                    text: "Welcome to PyPong, the classic Pong experience reimagined!"
+                    font_size: 20
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+        Widget:
+            min_height: 1
+
+        FloatLayout:
+            BoxLayout:
+                orientation: 'vertical'
+                height: root.height
+                pos_hint: {'center_x': 0.5, 'center_y': 0.85}
+                spacing: 20
+
+                Label:
+                    text: "Highest score: 123"
+                    font_size: 32
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    padding: [0, 0, 0, 30]
+
+                Button:
+                    text: "Resume"
+                    font_size: 28
+                    size_hint_x: None
+                    size_hint_y: None
+                    width: 250
+                    height: self.texture_size[1] + 20
+                    pos_hint: {'center_x': 0.5}
+
+                Button:
+                    text: "Start New Game"
+                    font_size: 28
+                    size_hint_x: None
+                    size_hint_y: None
+                    width: 250
+                    height: self.texture_size[1] + 20
+                    pos_hint: {'center_x': 0.5}
+
+                Button:
+                    text: "View Scores"
+                    font_size: 28
+                    size_hint_x: None
+                    size_hint_y: None
+                    width: 250
+                    height: self.texture_size[1] + 20
+                    pos_hint: {'center_x': 0.5}
+
+                Label:
+                    text: '[ref=how_to_play][color=#00A2E8][u]How to play?[/u][/color][/ref]'
+                    font_size: 28
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    markup: True
+                    padding: [0, 20, 0, 0]
+
+
+        Widget:
+            min_height: 1
