@@ -1,7 +1,41 @@
+<GameResultsView>:
+    viewclass: 'RowItem'
+
+    RecycleBoxLayout:
+        orientation: 'vertical'
+        default_size: None, 40
+        size_hint_y: None
+        height: self.minimum_height
+        spacing: 2
+
+<RowItem>:
+    orientation: 'horizontal'
+    size_hint_y: None
+    height: 40
+
+    Label:
+        text: root.id
+        size_hint_x: 0.1
+
+    Label:
+        text: root.time_played
+        size_hint_x: 0.2
+
+    Label:
+        text: root.timestamp
+        size_hint_x: 0.4
+
+    Label:
+        text: root.p1_score
+        size_hint_x: 0.15
+
+    Label:
+        text: root.p2_score
+        size_hint_x: 0.15
+
+
 <ScoresScreen>:
     BoxLayout:
         orientation: 'vertical'
-        Label:
-            text: "ScoresScreen"
-            font_size: 24
-            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+        GameResultsView:

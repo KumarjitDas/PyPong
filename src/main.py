@@ -2,6 +2,7 @@ from kivy.app import App
 from kivy.core.window import Window
 
 from src.appscreenmanager import AppScreenManager
+from src.db import create_table
 
 APP_MIN_WIDTH = 900
 APP_MIN_HEIGHT = 600
@@ -22,6 +23,8 @@ class PyPongApp(App):
         self.pause_command = None
         self.resume_command = None
         self.restart_command = None
+
+        create_table()
 
     def build(self):
         app = AppScreenManager()
