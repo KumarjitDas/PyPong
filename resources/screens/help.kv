@@ -1,0 +1,55 @@
+<HelpScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+
+        Label:
+            text: "How to play?"
+            font_size: 48
+
+
+        FloatLayout:
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_x: 0.6
+                size_hint_y: None
+                pos_hint: {'center_x': 0.5, 'center_y': 0.9}
+                spacing: 10
+
+                Label:
+                    text: "• Press W/S (up/down) to control left paddle (Player 1)."
+                    font_size: 28
+                    halign: 'left'
+                    valign: 'middle'
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text_size: self.width, None
+
+                Label:
+                    text: "• Press arrow keys up/down to control right paddle (Player 2)."
+                    font_size: 28
+                    halign: 'left'
+                    valign: 'middle'
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text_size: self.width, None
+
+                Label:
+                    text: "• Press space bar to pause/resume the game."
+                    font_size: 28
+                    halign: 'left'
+                    valign: 'middle'
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text_size: self.width, None
+
+        FloatLayout:
+            Button:
+                text: "Return"
+                font_size: 28
+                size_hint_x: None
+                size_hint_y: None
+                width: 250
+                height: self.texture_size[1] + 20
+                pos_hint: {'center_x': 0.5, 'center_y': 1.0}
+                on_release: root.navigate_to_welcome()

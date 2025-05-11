@@ -6,8 +6,8 @@
         FloatLayout:
             BoxLayout:
                 orientation: 'vertical'
-                height: root.height
-                pos_hint: {'center_x': 0.5, 'center_y': 0.75}
+                pos_hint: {'center_x': 0.5, 'top': 1.0}
+                spacing: 10
 
                 Label:
                     text: "PyPong"
@@ -21,22 +21,19 @@
                     size_hint_y: None
                     height: self.texture_size[1]
 
-        Widget:
-            min_height: 1
+        FloatLayout:
+            Label:
+                text: "Highest score: 123"
+                font_size: 32
+                size_hint_y: None
+                height: self.texture_size[1]
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
 
         FloatLayout:
             BoxLayout:
                 orientation: 'vertical'
-                height: root.height
-                pos_hint: {'center_x': 0.5, 'center_y': 0.85}
+                pos_hint: {'center_x': 0.5, 'top': 0.75}
                 spacing: 20
-
-                Label:
-                    text: "Highest score: 123"
-                    font_size: 32
-                    size_hint_y: None
-                    height: self.texture_size[1]
-                    padding: [0, 0, 0, 30]
 
                 Button:
                     text: "Resume"
@@ -55,9 +52,20 @@
                     width: 250
                     height: self.texture_size[1] + 20
                     pos_hint: {'center_x': 0.5}
+                    on_release: root.navigate_to_game()
 
                 Button:
                     text: "View Scores"
+                    font_size: 28
+                    size_hint_x: None
+                    size_hint_y: None
+                    width: 250
+                    height: self.texture_size[1] + 20
+                    pos_hint: {'center_x': 0.5}
+                    on_release: root.navigate_to_scores()
+
+                Button:
+                    text: "Quit"
                     font_size: 28
                     size_hint_x: None
                     size_hint_y: None
@@ -72,7 +80,14 @@
                     height: self.texture_size[1]
                     markup: True
                     padding: [0, 20, 0, 0]
-
+                    on_ref_press: root.navigate_to_help()
 
         Widget:
             min_height: 1
+
+        Label:
+            text: "Copyright © 2025  Kumarjit Das"
+            font_size: 14
+            size_hint_y: None
+            height: self.texture_size[1]
+            padding: [0, 0, 0, 10]

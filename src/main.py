@@ -3,15 +3,18 @@ from kivy.core.window import Window
 
 from src.appscreenmanager import AppScreenManager
 
+APP_MIN_WIDTH = 900
+APP_MIN_HEIGHT = 600
+
 
 class PyPongApp(App):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-        Window.size = (900, 600)
-        Window.minimum_width = 720
-        Window.minimum_height = 480
+        Window.size = (APP_MIN_WIDTH, APP_MIN_HEIGHT)
+        Window.minimum_width = APP_MIN_WIDTH
+        Window.minimum_height = APP_MIN_HEIGHT
 
         self.controller = None
         self.state_context = None
