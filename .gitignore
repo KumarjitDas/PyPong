@@ -1,1 +1,41 @@
-src/__pycache__/*
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.eggs/
+dist/
+build/
+sdist/
+*.egg-info/
+*.whl
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
+
+# PyInstaller
+#  Often these are created inadvertently by running components of
+#  PyInstaller; be sure to clean them up if you don't want them.
+*.manifest
+*.spec
+
+# Build artifacts:
+*.lib
+*.exp
+*.obj
+*.pyd
+*.dll
+
+# IDEs and editors
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS or system files
+.DS_Store

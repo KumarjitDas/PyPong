@@ -1,11 +1,16 @@
 from kivy.uix.screenmanager import Screen
+
 from src.ui import load_screen
 from src.utils import navigate_to
+from src.utils.quitpopup import EscapableQuitPopup
 
 load_screen('screens/welcome')
 
 
-class WelcomeScreen(Screen):
+class WelcomeScreen(Screen, EscapableQuitPopup):
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
 
     def navigate_to_game(self):
         navigate_to('game')

@@ -1,0 +1,39 @@
+<QuitPopup@Popup>:
+    title: 'Quit?'
+    auto_dismiss: False
+    size_hint: None, None
+    width: 600
+    height: 250
+    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: "Do you really want to quit?"
+            font_size: 20
+            size_hint: (None, None)
+            size: self.texture_size
+            padding: [20, 20, 20, 0]
+
+        BoxLayout:
+            orientation: 'horizontal'
+            pos_hint: {'right': 1, 'y': 0}
+            spacing: 20
+
+            Widget:
+                min_width: 1
+
+            Button:
+                text: 'No'
+                size_hint: (None, None)
+                width: 200
+                height: self.texture_size[1] + 20
+                on_release: root.dismiss()
+
+            Button:
+                text: 'Yes'
+                size_hint: (None, None)
+                width: 200
+                height: self.texture_size[1] + 20
+                on_release: root.quit_app()

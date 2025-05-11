@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='PyPong',
-    version='0.1.0',
+    version='0.2.0',
     description="""
 PyPong is a simple and classic Pong game built with Python and Kivy, designed to bring back the retro gaming experience
 with a modern touch. This project serves as both a fun game and a practical implementation of game development concepts
